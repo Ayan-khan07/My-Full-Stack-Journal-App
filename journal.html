@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal App</title>
+    <link rel="stylesheet" href="journal.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📔 My Journal</h1>
+            <p class="subtitle">Keep track of your thoughts and memories</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Username & Password Section -->
+            <section class="username-section">
+                <div class="username-input-group">
+                    <input 
+                        type="text" 
+                        id="username" 
+                        placeholder="Enter your username" 
+                        class="username-input"
+                    >
+                    <!-- Added password input field -->
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Enter your password" 
+                        class="username-input"
+                    >
+                    <button id="fetch-btn" class="btn btn-primary">Fetch Journals</button>
+                </div>
+            </section>
+
+            <!-- Create Entry Form -->
+            <section class="form-section">
+                <h2>Create New Entry</h2>
+                <form id="entry-form" class="entry-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input 
+                            type="text" 
+                            id="title" 
+                            placeholder="Entry title" 
+                            class="form-input"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea 
+                            id="content" 
+                            placeholder="Write your thoughts here..." 
+                            class="form-textarea"
+                            rows="6"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Save Entry</button>
+                </form>
+            </section>
+
+            <!-- Journal Entries Display -->
+            <section class="entries-section">
+                <h2>Your Entries</h2>
+                <div id="journal-list" class="journal-list">
+                    <p class="empty-state">No entries yet. Create one to get started!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Journal App. Your thoughts, preserved.</p>
+        </footer>
+    </div>
+
+    <script src="journal.js"></script>
+</body>
+</html>
